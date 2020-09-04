@@ -1,0 +1,63 @@
+comandos-GNU-UNIX
+date -> retorna a data no terminal
+clear -> limpa o terminal
+echo $SHELL -> imprime o tipo de shell está rodando no sistema operacional
+type -> identificar se um comando é interno ou não (type tar)
+pwd -> mostra o diretório atual
+
+./Script_Exemplo.sh -> executa um script se já estiver na pasta
+/home/snow/Documentos/curso-linux/Exercicios/Script_Exemplo.sh -> executa script passando o caminho absoluto
+Exercicios/Script_Exemplo.sh -> execulta o script passando o caminho relativo
+
+env TESTE=Windows Exercicios/Script_Variavel.sh -> em momento de execução irá atribuir o valor Windows para a variável
+
+unset TESTE -> deleta uma variável 
+
+top & -> & processo irá rodar em background
+
+echo $? -> retorna o status do ultimo PID (!= de 0 error)
+echo $! -> ultimo PID de um processo rodado em background
+echo $$ -> retorna o PID do bash
+echo ~ -> devolve o home do usuário atual
+
+
+set|more -> mostra as variaveis de ambiente
+set|less -> mostra as variaveis de ambiente de forma paginada
+env|less -> mostra as variaveis de ambiente de forma paginada
+
+set|grep HISTFILE -> filtra a variavel HISTFILE
+
+executar comando de forma sequencial
+
+ls; pwd; echo -> executa sem se importa que o comando deu certo ou não, executando de forma sequencial
+ls && pwd && echo -> executa, porém se um falhar os outros não são executados
+ls || echo -> se um falhar o outro será executado 
+
+!! -> repete o ultimo comando
+!2 -> executa o comando 2 do history
+
+
+uname -a -> mostra detalhes do systema operacional, versão etc
+
+which -> ferramenta de busca para localizar onde estão localizado os comandos dentro do PATH
+
+
+***************************FILE********************************************
+
+cat file_name - imprime arquivo no terminal
+cat -n file_name - imprime arquivo no terminal numerando as linhas
+tac file_name - imprime arquivo no terminal de trás para frente
+head file_name - imprime as primeiras linhas do arquivo
+head -n2 file_name - imprime as duas primeiras linhas do arquivo
+tail file_name - imprime as ultimas linhas do arquivo
+tail -10  -f file_name - imprime as 10 ultimas linhas do arquivo e aguarda uma ação no arquivo
+less file_name - imprime linhas do arquivo paginando
+wc - imprime quantidade de linhas do arquivo, caracteres, palavras 
+nl - numera as linhas do arquivo
+sort file_name - ordena o arquivo de A-Z
+sort -r file_name - ordena o arquivo de Z-A
+
+
+
+
+
